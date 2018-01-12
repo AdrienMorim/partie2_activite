@@ -19,15 +19,17 @@ $(function annivOneClick() {
             $('#1').addClass('item-active').css('background-color','#00ffbf');
             $('#zero').removeClass('item-active');
             
+            // On affiche le <p id="2">
             $('#2').show(1500, function() {
                 $('#2').addClass('item-active').css('background-color','#f2fc5f');
                 $('#1').addClass('item-enter-active').removeClass('item-active item-enter');
                 
+                // On affiche le <p id="3">
                 $('#3').show(1500, function() {
                     $('#3').addClass('item-active').css('background-color','#ff007b');
                     $('#2').addClass('item-enter-active').removeClass('item-active item-enter');
                     
-                    // On modifie le background à la fin de l'animation
+                    // On modifie le background à la fin de l'animation en utilisant setTimeout
                     setTimeout(function(){
                         $('#3').addClass('item-enter-active').removeClass('item-active item-enter');
                         $('body').css({'background-color': '#e74c3c',
